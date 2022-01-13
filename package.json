@@ -1,5 +1,5 @@
 {
-  "name": "demo.playwright",
+  "name": "playwright-examples",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarcusFelling/Demo.Playwright.git"
+    "url": "git+https://github.com/Microsoft/playwright-examples.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MarcusFelling/Demo.Playwright/issues"
+    "url": "https://github.com/Microsoft/playwright-examples/issues"
   },
-  "homepage": "https://github.com/MarcusFelling/Demo.Playwright#readme",
+  "homepage": "https://github.com/Microsoft/playwright-examples#readme",
   "devDependencies": {
     "@playwright/test": "^1.17.1",
     "@types/express": "^4.17.13",
