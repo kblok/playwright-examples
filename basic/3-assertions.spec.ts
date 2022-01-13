@@ -33,19 +33,19 @@ test('should be able to use assertions', async ({ page }) => {
   await test.step('toBeChecked', async () => {
     const firstItemCheckbox = page.locator('input[type=checkbox]:left-of(:text("Buy milk"))');
     await expect(firstItemCheckbox).not.toBeChecked();
-    await page.check('div input[type="checkbox"]');
+    await page.locator('div input[type="checkbox"]').last().check();
     await expect(firstItemCheckbox).toBeChecked();
   });
 
   await test.step('toBeVisible/toBeHidden', async () => {
     await expect(page.locator('text=Buy milk')).toBeVisible();
-    await page.click('text=Active');
+    await page.locator('text=Active').click();
     await expect(page.locator('text=Buy milk')).toBeHidden();
   });
 
   await test.step('toHaveClass/toHaveCSS', async () => {
     await expect(page.locator('[placeholder="What needs to be done?"]')).toHaveClass('new-todo');
-    await page.click('text=Clear completed');
+    await page.locator('text=Clear completed').click();
     await expect(page.locator('.todoapp')).not.toHaveClass('.main');
   });
 });
