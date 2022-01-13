@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
  */
 test('should be able to use assertions', async ({ page }) => {
   await test.step('toHaveTitle/toHaveURL', async () => {
-    await expect(page).toHaveTitle('Vanilla ES6 • TodoMVC');
+    await expect(page).toHaveTitle('React • TodoMVC');
     await expect(page).toHaveURL('https://demo.playwright.dev/todomvc/#/');
   });
 
@@ -46,6 +46,6 @@ test('should be able to use assertions', async ({ page }) => {
   await test.step('toHaveClass/toHaveCSS', async () => {
     await expect(page.locator('[placeholder="What needs to be done?"]')).toHaveClass('new-todo');
     await page.click('text=Clear completed');
-    await expect(page.locator('.main')).toHaveCSS('display', 'none');
+    await expect(page.locator('.todoapp')).not.toHaveClass('.main');
   });
 });
