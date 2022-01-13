@@ -23,6 +23,6 @@ export class TodoPage {
   }
 
   async goto() {
-    await this.page.goto('https://todomvc.com/examples/vanilla-es6/');
+    await this.page.goto('https://demo.playwright.dev/todomvc/#/');
   }
 }
